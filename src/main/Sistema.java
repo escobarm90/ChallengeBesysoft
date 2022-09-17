@@ -38,6 +38,4 @@ public class Sistema {
         }
     }
 
-    //TODO Ya esta por ahora
-
 }

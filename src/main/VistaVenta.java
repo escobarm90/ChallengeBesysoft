@@ -44,10 +44,10 @@ public class VistaVenta {
                                 break;
                             }
                         }
-                        System.out.print("<1: Continuar //  2: Salir>: ");
+                        System.out.print("1: Continuar // 2: Salir");
                         opcion2 = teclado.nextInt();
                         teclado.nextLine();
-                    } while (opcion2 != 2);
+                    } while (opcion2 != 1);
                     System.out.println("");
 
                     break;
@@ -63,8 +63,7 @@ public class VistaVenta {
                                 tienda.AgregarProducto(producto);
                             }
                         }
-                        System.out.print("1: Continuar");
-                        System.out.print("2: Salir");
+                        System.out.print("1: Continuar // 2: Salir");
                         opcion3 = teclado.nextInt();
                     } while (opcion3 != 1);
                     System.out.println("");
@@ -78,16 +77,16 @@ public class VistaVenta {
                                 System.out.println(producto);
                                 System.out.println("Desea seleccionar el producto?\n Si = 1 \n No = 0");
                                 Integer seleccion = teclado.nextInt();
-                                if( seleccion == 1){
+                                if (seleccion == 1) {
                                     tienda.AgregarProducto(producto);
                                 }
+                            } else {
+                                System.out.println("Producto no encontrado");
                             }
                         }
 
 
-
-                        System.out.print("1: Continuar");
-                        System.out.print("2: Salir");
+                        System.out.print("1: Continuar // 2: Salir");
                         opcion2 = teclado.nextInt();
                     } while (opcion2 != 1);
                     System.out.println("");
@@ -101,28 +100,31 @@ public class VistaVenta {
                                 System.out.println(producto);
                                 System.out.println("Desea seleccionar el producto?\n Si = 1 \n No = 0");
                                 Integer seleccion = teclado.nextInt();
-                                if( seleccion == 1){
+                                if (seleccion == 1) {
                                     tienda.AgregarProducto(producto);
                                 }
+                            } else {
+                                System.out.println("Categoria no encontrada");
                             }
                         }
 
-                        System.out.print("1: Continuar");
-                        System.out.print("2: Salir");
-                        opcion2 = teclado.nextInt();
-                    } while (opcion2 != 1);
-                    System.out.println("");
-                    break;
-                case 0:
-                    System.out.println("salir");
-                    break;
+                            System.out.print("1: Continuar");
+                            System.out.print("2: Salir");
+                            opcion2 = teclado.nextInt();
+                        }
+                        while (opcion2 != 1) ;
+                        System.out.println("");
+                        break;
+                        case 0:
+                            System.out.println("salir");
+                            break;
 
-                default:
-                    System.out.println("opcion no valida");
-                    break;
-            }
+                        default:
+                            System.out.println("opcion no valida");
+                            break;
+                    }
 
 
-        } while (opcion != 0);
+            } while (opcion != 0) ;
+        }
     }
-}
